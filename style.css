@@ -2,9 +2,7 @@
 
 :root {
   --bg-light: #fdfdfd;
-  --bg-dark: #1e1e2f;
   --text-light: #1e1e1e;
-  --text-dark: #fdfdfd;
   --primary: linear-gradient(135deg, #667eea, #764ba2);
   --transition: all 0.3s ease;
 }
@@ -15,11 +13,6 @@ body {
   background: var(--bg-light);
   color: var(--text-light);
   transition: var(--transition);
-}
-
-body.dark {
-  background: var(--bg-dark);
-  color: var(--text-dark);
 }
 
 header {
@@ -37,14 +30,6 @@ header {
 
 h1, h2, h3 {
   margin: 0.5em 0;
-}
-
-button#theme-toggle {
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: inherit;
 }
 
 .intro p {
@@ -106,5 +91,5 @@ footer {
   padding: 1rem 0;
   border-top: 1px solid rgba(0,0,0,0.1);
   margin-top: 2rem;
-  color: inherit;
+  color: var(--text-light);
 }
