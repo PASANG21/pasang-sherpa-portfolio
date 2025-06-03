@@ -1,24 +1,8 @@
-// Modal image enlarge functionality
+// === script.js ===
+// Optional: click-to-enlarge image effect
 
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const closeBtn = document.querySelector('.close');
-const images = document.querySelectorAll('.enlargeable');
-
-images.forEach(img => {
+document.querySelectorAll('.click-to-enlarge').forEach(img => {
   img.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalImg.src = img.src;
-    modalImg.alt = img.alt;
+    img.style.transform = img.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)';
   });
-});
-
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-modal.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
 });
