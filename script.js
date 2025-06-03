@@ -1,26 +1,24 @@
-const toggleBtn = document.getElementById("theme-toggle");
-const body = document.body;
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
+// Modal image enlarge functionality
 
-// Toggle light/dark theme
-let dark = false;
-toggleBtn.addEventListener("click", () => {
-  dark = !dark;
-  body.classList.toggle("dark", dark);
-  toggleBtn.textContent = dark ? "☀️" : "🌙";
-});
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+const closeBtn = document.querySelector('.close');
+const images = document.querySelectorAll('.enlargeable');
 
-// Click to enlarge image
-const images = document.querySelectorAll(".clickable");
 images.forEach(img => {
-  img.addEventListener("click", () => {
-    lightboxImg.src = img.src;
-    lightbox.classList.remove("hidden");
+  img.addEventListener('click', () => {
+    modal.style.display = 'block';
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
   });
 });
 
-lightbox.addEventListener("click", () => {
-  lightbox.classList.add("hidden");
-  lightboxImg.src = "";
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
 });
