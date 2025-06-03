@@ -2,45 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pasang Sherpa - Graphic Designer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Pasang Sherpa - Graphics Designer" />
+  <title>Pasang Sherpa | Portfolio</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <h1>Pasang Sherpa</h1>
-    <button id="theme-toggle">🌙</button>
+    <div class="container">
+      <h1>Pasang Sherpa</h1>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Pasang Sherpa, a passionate graphic designer focused on delivering modern, aesthetic visuals with a professional touch.</p>
-  </section>
+  <main class="container">
+    <section class="intro">
+      <h2>Hello, I'm a Graphics Designer</h2>
+      <p>Welcome to my portfolio. Explore my creative works and certifications.</p>
+    </section>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="image-grid">
-      <img src="images/portfolio1.jpg" alt="Project 1" class="clickable" />
-      <img src="images/portfolio2.jpg" alt="Project 2" class="clickable" />
-    </div>
-  </section>
+    <section class="portfolio">
+      <h3>Portfolio</h3>
+      <div class="gallery">
+        <img src="images/design1.jpg" alt="Design 1" class="enlargeable" />
+        <img src="images/design2.jpg" alt="Design 2" class="enlargeable" />
+        <!-- Add more portfolio images here -->
+      </div>
+    </section>
 
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <div class="image-grid">
-      <img src="images/cert1.jpg" alt="Certificate 1" class="clickable" />
-      <img src="images/cert2.jpg" alt="Certificate 2" class="clickable" />
-    </div>
-  </section>
+    <section class="certificates">
+      <h3>Certificates</h3>
+      <div class="gallery">
+        <img src="images/certificate1.jpg" alt="Certificate 1" class="enlargeable" />
+        <img src="images/certificate2.jpg" alt="Certificate 2" class="enlargeable" />
+        <!-- Add more certificate images here -->
+      </div>
+    </section>
+  </main>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-  </section>
-
-  <div id="lightbox" class="hidden">
-    <img id="lightbox-img" src="" alt="" />
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Expanded view" />
   </div>
+
+  <footer class="container">
+    <p>&copy; 2025 Pasang Sherpa. All rights reserved.</p>
+  </footer>
 </body>
 </html>
