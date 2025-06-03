@@ -1,93 +1,27 @@
-:root {
-  --bg-light: #fdfdfd;
-  --text-light: #1e1e1e;
-  --primary: linear-gradient(135deg, #667eea, #764ba2);
-  --transition: all 0.3s ease;
-}
+/* === style.css === */
 
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  background: var(--bg-light);
-  color: var(--text-light);
-  transition: var(--transition);
-}
+body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; color: #111111; }
 
-header {
-  background: var(--primary);
-  color: white;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+.container { max-width: 1000px; margin: auto; padding: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
-}
+header { background: #f0f0f0; padding: 2rem 0; }
 
-h1, h2, h3 {
-  margin: 0.5em 0;
-}
+.intro-text { flex: 1; min-width: 300px; }
 
-.intro p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+.intro-image { flex: 1; text-align: right; min-width: 300px; }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-}
+.intro-image img { width: 250px; border-radius: 20px; }
 
-.gallery img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  cursor: zoom-in;
-}
+section { padding: 2rem 0; }
 
-.gallery img:hover {
-  transform: scale(1.03);
-}
+h1, h2 { margin-bottom: 1rem; }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-}
+img.click-to-enlarge { max-width: 100%; height: auto; cursor: pointer; border: 2px solid #ccc; border-radius: 10px; transition: transform 0.3s; }
 
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 8px;
-}
+img.click-to-enlarge:hover { transform: scale(1.05); }
 
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 35px;
-  font-weight: bold;
-  cursor: pointer;
-}
+footer { text-align: center; padding: 1rem; background: #222; color: #fff; }
 
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 1rem 0;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  margin-top: 2rem;
-  color: var(--text-light);
-}
+@media (max-width: 768px) { .container { flex-direction: column; align-items: center; }
+
+.intro-image { text-align: center; margin-top: 1rem; } }
